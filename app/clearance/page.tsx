@@ -102,7 +102,7 @@ function Page() {
                         name="region"
                         options={[
                           { label: 'Toshkent', value: 'toshkent' },
-                          { label: 'Sirdaryo', value: 'sirdaryo' },
+                          { label: "Farg'ona", value: "farg'ona" },
                         ]}
                         placeholder="Siz qaysi viloyatdansiz ?"
                         rules={[
@@ -118,10 +118,12 @@ function Page() {
                        <ProFormSelect
                         name="city"
                         options={[
-                          { label: 'Guliston', value: 'guliston' },
-                          { label: 'Sergeli', value: 'sergeli' },
+                          { label: "Qo'qon", value: "qo'qon" },
+                          { label: "Farg'ona", value: "farg'ona" },
+                          { label: "Marg'ilon", value: "Marg'ilon" },
+                          { label: 'Toskent', value: 'toshkent' },
                         ]}
-                        placeholder="Siz qaysi tumanidansiz ?"
+                        placeholder="Siz qaysi shahardansiz ?"
                         rules={[
                           {
                             required: true,

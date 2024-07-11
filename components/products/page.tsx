@@ -1,17 +1,15 @@
 import {
-  ArrowRightOutlined,
   BarChartOutlined,
   HeartOutlined,
   ShopOutlined,
 } from "@ant-design/icons";
 import { Avatar, Badge, Button } from "antd";
-import React, { useEffect } from "react";
 import "./style.css";
 import Link from "next/link";
 import useLikeStore from "@/store/likes/page";
 import {toast} from 'react-toastify'
 import Cookies from "js-cookie";
-import { Rate } from 'antd';
+
 import useCartsStore from "@/store/card/page";
 
 function Page({datas}:any) {
@@ -53,13 +51,12 @@ function Page({datas}:any) {
           {datas.name}
         </p>
         <h4 className="font-bold text-[18px] max-sm:text-[16px]">{datas.price} so‘m</h4>
-        {/* <Rate value={datas?.rate} disabled className="cursor-pointer mt-[10px]"/> */}
         <p className="text-[#1EB91E] mt-[11px] mb-[19px] bg-[#1EB91E14] inline-block py-2 px-4 rounded-lg max-sm:text-[14px]">
           {number} so’mdan/12 oy
         </p>
         </Link>
-        <div className="flex items-center gap-[10px]">
-          <Button onClick={() => handleCartSubmit(datas.id)} className="btn_product max-sm:w-[100%]">
+        <div className="flex flex-col md:flex-row items-center gap-[10px]">
+          <Button onClick={() => handleCartSubmit(datas.id)} className="btn_product w-[90%] md:w-[100px]">
             <ShopOutlined/> Savat 
           </Button>
          <div className="flex item-center gap-[10px]">
